@@ -1,12 +1,12 @@
 # LED Finger Detection
 
-Lights up LEDs on an Arduino to match the fingers a webcam sees you holding up. A Python script on the computer does the hand tracking and sends simple serial commands to the board, which switches the LEDs.
+Finger detection in Python on the computer, with the results shown on LEDs wired to an Arduino. The computer sends simple serial commands and the board switches the LEDs.
 
 ## What's in this repo
 
 `ledcontrol/ledcontrol.ino` is the Arduino side. It listens on serial at 9600 baud and drives five LEDs on pins 8 through 12.
 
-The Python hand tracking script is not committed yet.
+The Python finger detection script is not committed yet.
 
 ## Serial protocol
 
@@ -21,7 +21,7 @@ The number is the Arduino pin (8 to 12). Commands for any other pin are ignored.
 
 ## Wiring
 
-Connect each LED's anode through a 220 Ω resistor to pins 8, 9, 10, 11, and 12, with every cathode going to GND.
+A typical setup connects each LED's anode through a current limiting resistor (around 220 Ω) to pins 8, 9, 10, 11, and 12, with every cathode going to GND.
 
 ## Running it
 
